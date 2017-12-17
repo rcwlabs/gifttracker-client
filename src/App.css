@@ -24,6 +24,9 @@
 
 .item-group {
   margin-bottom: 20px;
+  background-color: lightblue;
+  max-width: 320px;
+  padding: 10px 5px;
 }
 
 ul li {

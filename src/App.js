@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+
+import Gift from './components/Gift';
+
 import logo from './logo.svg';
 import './App.css';
 
@@ -32,16 +35,8 @@ class App extends Component {
 
     let theList = this.state.theList.map(item => {
       return (
-        <li key={item._id}>
-          <div className="item-group">
-          {item.recipient}<br />
-          {item.gift}<br />
-          {item.price}<br />
-          {item.store}<br />
-          {item.notes}<br />
-          </div>
-        </li>
-      )
+        <Gift item={item} />
+      );
     });
 
     console.log(this.state.theList);
