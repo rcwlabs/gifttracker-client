@@ -13,16 +13,16 @@ export default class Gift extends Component {
     render() {
 
         return(
-            <div>
-                <li key={this.props.item._id}>
-                    <div className="item-group">
-                        {this.props.item.recipient}<br />
-                        {this.props.item.gift}<br />
-                        {this.props.item.price}<br />
-                        {this.props.item.store}<br />
-                        {this.props.item.notes}<br />
+            <div key={this.props.item._id}>
+                <div className="item-group">
+                    <div className='recipient'>
+                        {this.props.item.recipient}
                     </div>
-                </li>
+                    {this.props.item.gift}<br /><br />
+                    Price: ${this.props.item.price}<br />
+                    Store: {this.props.item.store}<br />
+                    Notes: {this.props.item.notes}<br />
+                </div>
             </div>
         );
     };
